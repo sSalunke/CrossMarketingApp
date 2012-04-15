@@ -33,6 +33,8 @@
 		55F1CB8D15382C43009FDA53 /* arrowright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8515382C43009FDA53 /* arrowright@2x.png */; };
 		55F1CB8E15382C43009FDA53 /* arrowup.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8615382C43009FDA53 /* arrowup.png */; };
 		55F1CB8F15382C43009FDA53 /* arrowup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8715382C43009FDA53 /* arrowup@2x.png */; };
+		DA2C5AE8153B4BBF00D63C4D /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C5AE7153B4BBF00D63C4D /* AppInfo.m */; };
+		DA2C5AEB153B4BEA00D63C4D /* AppInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2C5AEA153B4BEA00D63C4D /* AppInfo.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,9 @@
 		55F1CB8515382C43009FDA53 /* arrowright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowright@2x.png"; sourceTree = "<group>"; };
 		55F1CB8615382C43009FDA53 /* arrowup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowup.png; sourceTree = "<group>"; };
 		55F1CB8715382C43009FDA53 /* arrowup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowup@2x.png"; sourceTree = "<group>"; };
+		DA2C5AE6153B4BBF00D63C4D /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		DA2C5AE7153B4BBF00D63C4D /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
+		DA2C5AEA153B4BEA00D63C4D /* AppInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfo.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,9 @@
 				556D795D1536B8C5005E6E90 /* Supporting Files */,
 				558AF347153834CC0030EB9A /* LazyImageLoader.h */,
 				558AF348153834CC0030EB9A /* LazyImageLoader.m */,
+				DA2C5AE6153B4BBF00D63C4D /* AppInfo.h */,
+				DA2C5AE7153B4BBF00D63C4D /* AppInfo.m */,
+				DA2C5AEA153B4BEA00D63C4D /* AppInfo.xib */,
 			);
 			path = CrossMarketingApp;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 				558AF35C153862CE0030EB9A /* Icon-Small@2x.png in Resources */,
 				558AF35D153862CE0030EB9A /* Icon.png in Resources */,
 				558AF35E153862CE0030EB9A /* Icon@2x.png in Resources */,
+				DA2C5AEB153B4BEA00D63C4D /* AppInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,7 @@
 				556D796A1536B8C5005E6E90 /* MasterViewController.m in Sources */,
 				556D796D1536B8C5005E6E90 /* DetailViewController.m in Sources */,
 				558AF349153834CC0030EB9A /* LazyImageLoader.m in Sources */,
+				DA2C5AE8153B4BBF00D63C4D /* AppInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

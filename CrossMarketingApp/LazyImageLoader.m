@@ -86,7 +86,7 @@
 {
     NSLog(@"Failed to fetch image");
     
-    [self setImage:[UIImage imageNamed:@"Icon-72.png"]];
+   // [self setImage:[UIImage imageNamed:@"Icon-72.png"]];
 }
 
 

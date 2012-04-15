@@ -12,6 +12,8 @@
 
 @implementation MasterViewController
 
+@synthesize arrayOfRecords = _arrayOfRecords;
+
 @synthesize detailViewController = _detailViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,6 +36,17 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
+
+#pragma mark - User methods
+
+-(void)getAppDataFromServer
+
+-(void)fetchTableDataFromPlistAndRefresh
+{
+    NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"AppList" ofType:@"plist"];
+    self.arrayOfRecords = [NSArray arrayWithContentsOfFile:plistPath];
+}
+
 
 #pragma mark - View lifecycle
 
@@ -75,6 +88,7 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+#pragma mark - TableView Delegate methods
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

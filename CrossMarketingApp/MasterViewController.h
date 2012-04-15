@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+@property (nonatomic, strong) NSArray *arrayOfRecords;
+
 @end
