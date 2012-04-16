@@ -24,6 +24,9 @@
 
 @property (retain, nonatomic) IBOutlet UIToolbar *descToolBar;
 
+@property (nonatomic) NSInteger currentIndex;
+@property (nonatomic, copy) NSArray *arrayOfItems;
+
 - (IBAction)getPreviousItem:(id)sender;
 
 - (IBAction)getNextItem:(id)sender;

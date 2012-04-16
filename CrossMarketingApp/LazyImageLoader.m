@@ -13,27 +13,14 @@
     NSMutableData *imageData;
 }
 
-
-@property (nonatomic, strong) NSString *imagePath;
-
 @end
 
 @implementation LazyImageLoader
-@synthesize imagePath;
 
-- (id)initWithImagePath:(NSString *)strImagePath
+-(void)getAppImageLazilyWithImagePath:(NSString *)imagePath;
 {
-    self = [super init];
-    if (self) {
-        
-        self.imagePath = strImagePath;
-    }
-    return self;
-}
-
--(void)getAppImageLazily
-{
-    NSURL *url = [[NSURL alloc]initWithString:self.imagePath];
+    
+    NSURL *url = [[NSURL alloc]initWithString:imagePath];
     
     NSURLRequest *imageRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
     
@@ -78,7 +65,7 @@
         return; 
     }
     
-    [self setImage:newImage];
+    [self performSelectorOnMainThread:@selector(setImage:) withObject:newImage waitUntilDone:YES];
     
 }
 

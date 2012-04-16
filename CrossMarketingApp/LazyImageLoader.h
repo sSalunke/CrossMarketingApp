@@ -10,7 +10,7 @@
 
 @interface LazyImageLoader : UIImageView
 
--(id)initWithImagePath:(NSString *)strImagePath;
--(void)getAppImageLazily; 
+
+-(void)getAppImageLazilyWithImagePath:(NSString *)imagePath; 
 
 @end

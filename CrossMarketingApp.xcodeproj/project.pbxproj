@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555039E4153C59ED0038C33A /* Property_List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 555039E2153C59ED0038C33A /* Property_List.plist */; };
+		555039E6153C5A4C0038C33A /* Applist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 555039E5153C5A4C0038C33A /* Applist.plist */; };
 		556D79571536B8C5005E6E90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556D79561536B8C5005E6E90 /* UIKit.framework */; };
 		556D79591536B8C5005E6E90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556D79581536B8C5005E6E90 /* Foundation.framework */; };
 		556D795B1536B8C5005E6E90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556D795A1536B8C5005E6E90 /* CoreGraphics.framework */; };
@@ -17,7 +19,6 @@
 		556D796D1536B8C5005E6E90 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D796C1536B8C5005E6E90 /* DetailViewController.m */; };
 		556D79701536B8C5005E6E90 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D796E1536B8C5005E6E90 /* MasterViewController.xib */; };
 		556D79731536B8C5005E6E90 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D79711536B8C5005E6E90 /* DetailViewController.xib */; };
-		556D798315370679005E6E90 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 556D798215370679005E6E90 /* AppList.plist */; };
 		558AF349153834CC0030EB9A /* LazyImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 558AF348153834CC0030EB9A /* LazyImageLoader.m */; };
 		558AF359153862CE0030EB9A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF353153862CD0030EB9A /* Icon-72.png */; };
 		558AF35A153862CE0030EB9A /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF354153862CD0030EB9A /* Icon-Small-50.png */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555039E2153C59ED0038C33A /* Property_List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Property_List.plist; sourceTree = "<group>"; };
+		555039E5153C5A4C0038C33A /* Applist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Applist.plist; sourceTree = "<group>"; };
 		556D79521536B8C5005E6E90 /* CrossMarketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossMarketingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556D79561536B8C5005E6E90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		556D79581536B8C5005E6E90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,7 +57,6 @@
 		556D796C1536B8C5005E6E90 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		556D796F1536B8C5005E6E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		556D79721536B8C5005E6E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
-		556D798215370679005E6E90 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
 		558AF347153834CC0030EB9A /* LazyImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyImageLoader.h; sourceTree = "<group>"; };
 		558AF348153834CC0030EB9A /* LazyImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyImageLoader.m; sourceTree = "<group>"; };
 		558AF353153862CD0030EB9A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 		556D79471536B8C5005E6E90 = {
 			isa = PBXGroup;
 			children = (
-				556D798215370679005E6E90 /* AppList.plist */,
 				556D795C1536B8C5005E6E90 /* CrossMarketingApp */,
 				556D79551536B8C5005E6E90 /* Frameworks */,
 				556D79531536B8C5005E6E90 /* Products */,
@@ -154,6 +155,8 @@
 		55F1CB7F15382C43009FDA53 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				555039E5153C5A4C0038C33A /* Applist.plist */,
+				555039E2153C59ED0038C33A /* Property_List.plist */,
 				558AF353153862CD0030EB9A /* Icon-72.png */,
 				558AF354153862CD0030EB9A /* Icon-Small-50.png */,
 				558AF355153862CD0030EB9A /* Icon-Small.png */,
@@ -225,7 +228,6 @@
 				556D79611536B8C5005E6E90 /* InfoPlist.strings in Resources */,
 				556D79701536B8C5005E6E90 /* MasterViewController.xib in Resources */,
 				556D79731536B8C5005E6E90 /* DetailViewController.xib in Resources */,
-				556D798315370679005E6E90 /* AppList.plist in Resources */,
 				55F1CB8815382C43009FDA53 /* arrowdown.png in Resources */,
 				55F1CB8915382C43009FDA53 /* arrowdown@2x.png in Resources */,
 				55F1CB8A15382C43009FDA53 /* arrowleft.png in Resources */,
@@ -241,6 +243,8 @@
 				558AF35D153862CE0030EB9A /* Icon.png in Resources */,
 				558AF35E153862CE0030EB9A /* Icon@2x.png in Resources */,
 				DA2C5AEB153B4BEA00D63C4D /* AppInfo.xib in Resources */,
+				555039E4153C59ED0038C33A /* Property_List.plist in Resources */,
+				555039E6153C5A4C0038C33A /* Applist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

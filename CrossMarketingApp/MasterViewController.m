@@ -10,6 +10,8 @@
 
 #import "DetailViewController.h"
 
+#import "AppInfo.h"
+
 @implementation MasterViewController
 
 @synthesize arrayOfRecords = _arrayOfRecords;
@@ -40,11 +42,16 @@
 #pragma mark - User methods
 
 -(void)getAppDataFromServer
+{
+    
+}
 
 -(void)fetchTableDataFromPlistAndRefresh
 {
-    NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"AppList" ofType:@"plist"];
-    self.arrayOfRecords = [NSArray arrayWithContentsOfFile:plistPath];
+    NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"Applist" ofType:@"plist"];
+    self.arrayOfRecords = [[NSArray alloc]initWithContentsOfFile:plistPath];
+    NSLog(@"%@",self.arrayOfRecords);
+    [self.tableView reloadData];
 }
 
 
@@ -53,6 +60,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchTableDataFromPlistAndRefresh];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -66,6 +75,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -98,7 +108,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.arrayOfRecords.count;
 }
 
 // Customize the appearance of table view cells.
@@ -106,14 +116,19 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSDictionary *appData = [self.arrayOfRecords objectAtIndex:indexPath.row];
+    
+    AppInfo *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"AppInfo" owner:self options:nil]objectAtIndex:0];
     }
-
+    NSString *imagePath  = [appData valueForKey:@"AppImagePath"];
+    [cell.imageView getAppImageLazilyWithImagePath:imagePath];
+    cell.appTitle.text = (NSString*)[appData valueForKey:@"AppTitle"];
+    cell.appShortDesc.text = (NSString*)[appData valueForKey:@"AppShortDescription"];
+    
     // Configure the cell.
-    cell.textLabel.text = NSLocalizedString(@"Detail", @"Detail");
+   
     return cell;
 }
 

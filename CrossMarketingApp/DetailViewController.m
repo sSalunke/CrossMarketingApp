@@ -18,6 +18,8 @@
 @synthesize barButtonNext = _barButtonNext;
 @synthesize barButtonGetApplication = _barButtonGetApplication;
 @synthesize descToolBar = _descToolBar;
+@synthesize currentIndex = _currentIndex;
+@synthesize arrayOfItems = _arrayOfItems;
 
 
 - (void)dealloc
@@ -27,7 +29,7 @@
     
     [_appTitle release];
     [_appDescription release];
-    [_barButtonPrevious release];
+    [_barButtonPrevious release];   
     [_barButtonNext release];
     [_barButtonGetApplication release];
 
