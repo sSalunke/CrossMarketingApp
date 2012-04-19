@@ -8,6 +8,12 @@
 
 #import "DetailViewController.h"
 
+@interface DetailViewController () 
+
+-(void)displayInfoForSelectedIndex:(NSInteger)selectedIndex;
+
+@end
+
 
 @implementation DetailViewController
 
@@ -113,4 +119,12 @@
 
 - (IBAction)getTheApplication:(id)sender {
 }
+
+-(void)displayInfoForSelectedIndex:(NSInteger)selectedIndex
+{
+    NSDictionary *infoDict = [self.arrayOfItems objectAtIndex:selectedIndex];
+    self.appTitle.text = [infoDict valueForKey:@"AppTitle"];
+    
+}
+
 @end

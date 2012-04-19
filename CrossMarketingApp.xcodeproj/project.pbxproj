@@ -19,6 +19,8 @@
 		556D796D1536B8C5005E6E90 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D796C1536B8C5005E6E90 /* DetailViewController.m */; };
 		556D79701536B8C5005E6E90 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D796E1536B8C5005E6E90 /* MasterViewController.xib */; };
 		556D79731536B8C5005E6E90 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D79711536B8C5005E6E90 /* DetailViewController.xib */; };
+		556DF3A415403B0F00720C80 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 556DF3A315403B0F00720C80 /* ImageCache.m */; };
+		556DF3AC1540471D00720C80 /* ImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 556DF3AB1540471D00720C80 /* ImageFetcher.m */; };
 		558AF349153834CC0030EB9A /* LazyImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 558AF348153834CC0030EB9A /* LazyImageLoader.m */; };
 		558AF359153862CE0030EB9A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF353153862CD0030EB9A /* Icon-72.png */; };
 		558AF35A153862CE0030EB9A /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF354153862CD0030EB9A /* Icon-Small-50.png */; };
@@ -57,6 +59,11 @@
 		556D796C1536B8C5005E6E90 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		556D796F1536B8C5005E6E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		556D79721536B8C5005E6E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		556DF3A215403B0F00720C80 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		556DF3A315403B0F00720C80 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		556DF3AA1540471D00720C80 /* ImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFetcher.h; sourceTree = "<group>"; };
+		556DF3AB1540471D00720C80 /* ImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFetcher.m; sourceTree = "<group>"; };
+		556DF3AD154048EA00720C80 /* ImageFetcherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFetcherDelegate.h; sourceTree = "<group>"; };
 		558AF347153834CC0030EB9A /* LazyImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyImageLoader.h; sourceTree = "<group>"; };
 		558AF348153834CC0030EB9A /* LazyImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyImageLoader.m; sourceTree = "<group>"; };
 		558AF353153862CD0030EB9A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -137,6 +144,11 @@
 				DA2C5AE6153B4BBF00D63C4D /* AppInfo.h */,
 				DA2C5AE7153B4BBF00D63C4D /* AppInfo.m */,
 				DA2C5AEA153B4BEA00D63C4D /* AppInfo.xib */,
+				556DF3A215403B0F00720C80 /* ImageCache.h */,
+				556DF3A315403B0F00720C80 /* ImageCache.m */,
+				556DF3AA1540471D00720C80 /* ImageFetcher.h */,
+				556DF3AB1540471D00720C80 /* ImageFetcher.m */,
+				556DF3AD154048EA00720C80 /* ImageFetcherDelegate.h */,
 			);
 			path = CrossMarketingApp;
 			sourceTree = "<group>";
@@ -261,6 +273,8 @@
 				556D796D1536B8C5005E6E90 /* DetailViewController.m in Sources */,
 				558AF349153834CC0030EB9A /* LazyImageLoader.m in Sources */,
 				DA2C5AE8153B4BBF00D63C4D /* AppInfo.m in Sources */,
+				556DF3A415403B0F00720C80 /* ImageCache.m in Sources */,
+				556DF3AC1540471D00720C80 /* ImageFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
