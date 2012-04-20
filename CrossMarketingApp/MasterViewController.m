@@ -12,6 +12,10 @@
 
 #import "AppInfo.h"
 
+@interface MasterViewController ()
+-(void)setUpCellDataWithCell:(AppInfo *)cell andIndexPath:(NSIndexPath *)indexPath;
+@end
+
 @implementation MasterViewController
 
 @synthesize arrayOfRecords = _arrayOfRecords;
@@ -116,21 +120,32 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    NSDictionary *appData = [self.arrayOfRecords objectAtIndex:indexPath.row];
+    
     
     AppInfo *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"AppInfo" owner:self options:nil]objectAtIndex:0];
     }
-    NSString *imagePath  = [appData valueForKey:@"AppImagePath"];
-    [cell.imageView getAppImageLazilyWithImagePath:imagePath];
-    cell.appTitle.text = (NSString*)[appData valueForKey:@"AppTitle"];
-    cell.appShortDesc.text = (NSString*)[appData valueForKey:@"AppShortDescription"];
+    
     
     // Configure the cell.
    
+    [self setUpCellDataWithCell:cell andIndexPath:indexPath];
+    
     return cell;
 }
+
+-(void)setUpCellDataWithCell:(AppInfo *)cell andIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSDictionary *appData = [self.arrayOfRecords objectAtIndex:indexPath.row];
+    NSString *imagePath  = [appData valueForKey:@"AppImagePath"];
+    
+    [cell.imageView getAppImageLazilyWithImagePath:imagePath];
+    cell.appTitle.text = (NSString*)[appData valueForKey:@"AppTitle"];
+    cell.appShortDesc.text = (NSString*)[appData valueForKey:@"AppShortDescription"];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -175,7 +190,10 @@
     if (!self.detailViewController) {
         self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil] autorelease];
     }
+    self.detailViewController.arrayOfItems = self.arrayOfRecords;
+    self.detailViewController.currentIndex = indexPath.row;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
+    
 }
 
 @end

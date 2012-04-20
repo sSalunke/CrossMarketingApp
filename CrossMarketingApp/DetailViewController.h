@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LazyImageLoader.h"
 
 @interface DetailViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UIImageView *imageHolder;
+@property (retain, nonatomic) IBOutlet LazyImageLoader *imageHolder;
 
 @property (retain, nonatomic) IBOutlet UILabel *appTitle;
 
@@ -24,7 +25,7 @@
 
 @property (retain, nonatomic) IBOutlet UIToolbar *descToolBar;
 
-@property (nonatomic) NSInteger currentIndex;
+@property (nonatomic,readwrite) NSInteger currentIndex;
 @property (nonatomic, copy) NSArray *arrayOfItems;
 
 - (IBAction)getPreviousItem:(id)sender;

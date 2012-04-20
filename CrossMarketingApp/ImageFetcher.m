@@ -43,7 +43,7 @@
 }
 
 - (void)cancelLastRequest {
-    LogDebug(@"CancelLastRequest");
+    NSLog(@"CancelLastRequest");
     if (latestConenction) {
         [latestConenction cancel];
         [latestConenction release];
@@ -56,14 +56,14 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    LogDebug(@"connectionDidFailWithError");
+    NSLog(@"connectionDidFailWithError");
     if ([self.delegate respondsToSelector:@selector(imageFetcher:couldNotLoadImage:)]) {
         [self.delegate imageFetcher:self couldNotLoadImage:error];
     }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    LogDebug(@"connectionDidFinishLoading");
+    NSLog(@"connectionDidFinishLoading");
     UIImage *image = [[[UIImage alloc] initWithData:imageData] autorelease];
 
     if (![[ImageCache sharedImageCache] isImageCached:curImageURL])
@@ -79,7 +79,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     if ([response respondsToSelector:@selector(statusCode)]) {
         int statusCode = [((NSHTTPURLResponse *) response) statusCode];
-        LogDebug(@"didReceiveResponse - %d", statusCode);
+        NSLog(@"didReceiveResponse - %d", statusCode);
         if (statusCode >= 400) {
             [connection cancel];  // stop connecting; no more delegate messages
             NSDictionary *errorInfo

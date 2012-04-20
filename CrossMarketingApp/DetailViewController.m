@@ -56,6 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
 
 }
@@ -79,6 +80,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self displayInfoForSelectedIndex:self.currentIndex];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -112,18 +114,48 @@
 }
 							
 - (IBAction)getPreviousItem:(id)sender {
+    
+    
+    self.currentIndex-=1;
+    [self displayInfoForSelectedIndex:self.currentIndex];
 }
 
 - (IBAction)getNextItem:(id)sender {
+    self.currentIndex+=1;
+    [self displayInfoForSelectedIndex:self.currentIndex];
 }
 
 - (IBAction)getTheApplication:(id)sender {
+    
+    NSDictionary *infoDict = [self.arrayOfItems objectAtIndex:self.currentIndex];
+    NSString *appLink  = [infoDict objectForKey:@"AppLink"];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appLink]];
 }
 
 -(void)displayInfoForSelectedIndex:(NSInteger)selectedIndex
 {
     NSDictionary *infoDict = [self.arrayOfItems objectAtIndex:selectedIndex];
     self.appTitle.text = [infoDict valueForKey:@"AppTitle"];
+   
+    NSString *imagePath  = [infoDict valueForKey:@"AppImagePath"];
+    
+       
+    [self.imageHolder getAppImageLazilyWithImagePath:imagePath];
+    if (selectedIndex-1<0) {
+        self.barButtonPrevious.enabled = NO;
+    }
+    else
+    {
+        self.barButtonPrevious.enabled = YES;
+    }
+    if (selectedIndex+1==self.arrayOfItems.count) {
+        self.barButtonNext.enabled = NO;
+    }
+    else
+    {
+        self.barButtonNext.enabled = YES;
+    }
     
 }
 

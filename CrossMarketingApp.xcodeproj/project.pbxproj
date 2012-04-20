@@ -28,6 +28,7 @@
 		558AF35C153862CE0030EB9A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF356153862CD0030EB9A /* Icon-Small@2x.png */; };
 		558AF35D153862CE0030EB9A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF357153862CD0030EB9A /* Icon.png */; };
 		558AF35E153862CE0030EB9A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 558AF358153862CD0030EB9A /* Icon@2x.png */; };
+		55C5562415413A8C00D2A7F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C5562315413A8C00D2A7F2 /* QuartzCore.framework */; };
 		55F1CB8815382C43009FDA53 /* arrowdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8015382C43009FDA53 /* arrowdown.png */; };
 		55F1CB8915382C43009FDA53 /* arrowdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8115382C43009FDA53 /* arrowdown@2x.png */; };
 		55F1CB8A15382C43009FDA53 /* arrowleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F1CB8215382C43009FDA53 /* arrowleft.png */; };
@@ -72,6 +73,7 @@
 		558AF356153862CD0030EB9A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		558AF357153862CD0030EB9A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		558AF358153862CD0030EB9A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		55C5562315413A8C00D2A7F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		55F1CB8015382C43009FDA53 /* arrowdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowdown.png; sourceTree = "<group>"; };
 		55F1CB8115382C43009FDA53 /* arrowdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowdown@2x.png"; sourceTree = "<group>"; };
 		55F1CB8215382C43009FDA53 /* arrowleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowleft.png; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C5562415413A8C00D2A7F2 /* QuartzCore.framework in Frameworks */,
 				556D79571536B8C5005E6E90 /* UIKit.framework in Frameworks */,
 				556D79591536B8C5005E6E90 /* Foundation.framework in Frameworks */,
 				556D795B1536B8C5005E6E90 /* CoreGraphics.framework in Frameworks */,
@@ -102,6 +105,7 @@
 		556D79471536B8C5005E6E90 = {
 			isa = PBXGroup;
 			children = (
+				55C5562315413A8C00D2A7F2 /* QuartzCore.framework */,
 				556D795C1536B8C5005E6E90 /* CrossMarketingApp */,
 				556D79551536B8C5005E6E90 /* Frameworks */,
 				556D79531536B8C5005E6E90 /* Products */,
@@ -313,7 +317,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -328,6 +333,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -337,7 +344,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -346,6 +354,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -354,10 +364,14 @@
 		556D79771536B8C5005E6E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrossMarketingApp/CrossMarketingApp-Prefix.pch";
 				INFOPLIST_FILE = "CrossMarketingApp/CrossMarketingApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -365,10 +379,14 @@
 		556D79781536B8C5005E6E90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manish Malani (9JS9Y7VR2S)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrossMarketingApp/CrossMarketingApp-Prefix.pch";
 				INFOPLIST_FILE = "CrossMarketingApp/CrossMarketingApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E076CECF-86C4-42A6-9010-D6D20A36CA77";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

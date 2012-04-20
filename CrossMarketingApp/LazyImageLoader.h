@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ImageFetcher.h"
 
-@interface LazyImageLoader : UIImageView
+@interface LazyImageLoader : UIImageView<ImageFetcherDelegate>
 
 
 -(void)getAppImageLazilyWithImagePath:(NSString *)imagePath; 
