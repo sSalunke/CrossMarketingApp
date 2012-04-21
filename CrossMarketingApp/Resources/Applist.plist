@@ -6,7 +6,7 @@
 		<key>AppImagePath</key>
 		<string>http://a1.mzstatic.com/us/r1000/070/Purple/v4/09/0c/a0/090ca083-97ae-eeb9-1576-1ff36a028bc8/mzl.ntalagmr.175x175-75.jpg</string>
 		<key>AppLink</key>
-		<string>http://phobos.apple.com/us/app/instagram/id389801252?mt=8</string>
+		<string>http://itunes.apple.com/us/app/instagram/id389801252</string>
 		<key>AppShortDescription</key>
 		<string>Cool App to revoltionize photo sharing</string>
 		<key>AppTitle</key>
@@ -16,7 +16,7 @@
 		<key>AppImagePath</key>
 		<string>http://a4.mzstatic.com/us/r1000/111/Purple/v4/3d/6a/2b/3d6a2b17-e46c-5609-1bdc-1a3935ed2e51/mzl.edqotirc.175x175-75.jpg</string>
 		<key>AppLink</key>
-		<string>http://phobos.apple.com/us/app/draw-something-free/id488628250?mt=8</string>
+		<string>itms-apps://itunes.apple.com/app/id488628250</string>
 		<key>AppShortDescription</key>
 		<string>Draw Cool stuff..</string>
 		<key>AppTitle</key>
@@ -26,7 +26,7 @@
 		<key>AppImagePath</key>
 		<string>http://a1.mzstatic.com/us/r1000/119/Purple/v4/2f/a4/0b/2fa40bb1-623e-d7a8-3e17-09fc6fae992a/mzl.bqhzrklp.175x175-75.jpg</string>
 		<key>AppLink</key>
-		<string>http://phobos.apple.com/us/app/viddy/id426294709?mt=8</string>
+		<string>itms-apps://itunes.apple.com/app/id426294709</string>
 		<key>AppShortDescription</key>
 		<string>Capture And Share Videos with the world!</string>
 		<key>AppTitle</key>
@@ -36,7 +36,7 @@
 		<key>AppImagePath</key>
 		<string>http://a2.mzstatic.com/us/r1000/068/Purple/v4/e0/42/65/e0426561-d050-fc06-daba-ec47640c821c/QG6nOJs04dFDO44I0C4AEM-temp-upload.vtdcksbl.175x175-75.jpg</string>
 		<key>AppLink</key>
-		<string>http://phobos.apple.com/app/bike-race-free-by-top-free/id510461758?mt=8</string>
+		<string>itms-apps://itunes.apple.com/app/id510461758</string>
 		<key>AppShortDescription</key>
 		<string>A cool little Bike Game.</string>
 		<key>AppTitle</key>
